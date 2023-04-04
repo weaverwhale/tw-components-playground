@@ -1,17 +1,7 @@
 import React, { useState } from "react";
+import { Text } from "@weaverwhale/tw-components";
 
-export default function Header() {
-  const currentColorScheme =
-    window.localStorage.getItem("lightDark") === "true";
-  const [darkMode, setDarkMode] = useState(currentColorScheme);
-
-  const colorSchemeQueryList = window.matchMedia(
-    "(prefers-color-scheme: dark)"
-  );
-  colorSchemeQueryList.addEventListener("change", (e) =>
-    setDarkMode(e.matches || false)
-  );
-
+export default function Header({ darkMode, setDarkMode }) {
   return (
     <header>
       <div className="header-inner">
@@ -26,15 +16,14 @@ export default function Header() {
           </a>
         </div>
         <nav>
-          <a href="/">Home</a>
-          <div id="dark-light-toggle">
+          <div id="dark-light-toggle" className={`${darkMode && "dark"}`}>
             {darkMode ? (
               <i
                 id="dark"
                 aria-label="Dark Mode"
                 onClick={() => setDarkMode(false)}
               >
-                🌚
+                <Text c="white">🌚 Dark Mode</Text>
               </i>
             ) : (
               <i
@@ -42,7 +31,7 @@ export default function Header() {
                 aria-label="Light Mode"
                 onClick={() => setDarkMode(true)}
               >
-                🌝
+                <Text c="white">🌝 Light Mode</Text>
               </i>
             )}
           </div>

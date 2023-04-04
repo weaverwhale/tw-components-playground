@@ -80,7 +80,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export default function MantineHeader() {
+export default function MantineHero() {
   const { classes } = useStyles();
   const propExtras = { analyticsLabel: "Get Started Button Click" };
   return (

@@ -1,33 +1,20 @@
 import { useState, useEffect } from "react";
 import { Space, ComponentProvider } from "@weaverwhale/tw-components";
-import MantineHeader from "@/components/mantine/MantineHeader";
+import Header from "@/components/Header";
+import MantineHero from "@/components/mantine/MantineHero";
 import MantineCarousel from "@/components/mantine/MantineCarousel";
 
 export default function MantineApp() {
-  const [darkMode, setDarkMode] = useState(true);
+  const currentColorScheme =
+    window.localStorage.getItem("lightDark") === "true";
+  const [darkMode, setDarkMode] = useState(currentColorScheme || false);
 
-  // Check for dark mode
-  // a bit non-standard, but it works
-  useEffect(() => {
-    function checkDarkMode() {
-      const ld = window.localStorage.getItem("lightDark") === "true";
-      setDarkMode(ld);
-    }
-
-    document
-      .getElementById("dark-light-toggle")
-      .addEventListener("click", () => {
-        checkDarkMode();
-      });
-
-    checkDarkMode();
-
-    return () => {
-      document
-        .getElementById("dark-light-toggle")
-        .removeEventListener("change", checkDarkMode);
-    };
-  }, []);
+  const colorSchemeQueryList = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  );
+  colorSchemeQueryList.addEventListener("change", (e) =>
+    setDarkMode(e.matches || false)
+  );
 
   return (
     <ComponentProvider
@@ -44,7 +31,8 @@ export default function MantineApp() {
         colorScheme: darkMode ? "dark" : "light",
       }}
     >
-      <MantineHeader />
+      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+      <MantineHero />
       <div className="max-width">
         <MantineCarousel />
         <Space h="md" />
