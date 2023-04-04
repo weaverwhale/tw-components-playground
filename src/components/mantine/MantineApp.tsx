@@ -20,7 +20,6 @@ export default function MantineApp() {
     <ComponentProvider
       theme={{
         // Override any other properties from default theme
-        fontFamily: "Open Sans, sans serif",
         spacing: {
           xs: "1rem",
           sm: "1.2rem",
