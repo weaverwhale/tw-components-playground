@@ -1,0 +1,167 @@
+:root {
+  --font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI,
+    Roboto, Helvetica Neue, sans-serif;
+  --dark-black: #0d1117;
+  --black: #202223;
+  --yellow: #e9ff66;
+  --blue: #1877f2;
+  --middle-blue: #0d3854;
+  --dark-blue: #062940;
+  --light-blue: #c0d6ea;
+  --white: #fff;
+  --off-white: #e7e7e7;
+  --light-gray: #bababa;
+  --code-gray: #c9d1d9;
+  --gray: #999;
+  --dark-gray: rgb(124, 124, 124);
+  --box-shadow: rgb(0 0 0 / 8%) 0px 0px 8px;
+  --box-shadow-deep: rgb(0 0 0 / 16%) 0px 0px 8px;
+  --ease-in-out: cubic-bezier(0.42, 0, 0.58, 1);
+
+  /* element specific styles */
+  --header-background: var(--dark-blue);
+  --body-text: var(--black);
+  --body-background: #f6f6f7;
+  --post-background: var(--white);
+  --post-text: var(--black);
+  --post-text-hover: var(--blue);
+  --code-color: var(--black);
+  --code-background: var(--off-white);
+  --link-color: var(--blue);
+}
+
+/* 
+prefers dark mode
+https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
+*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --header-background: var(--middle-blue);
+    --body-text: var(--white);
+    --body-background: var(--dark-blue);
+    --post-background: var(--middle-blue);
+    --post-text: var(--white);
+    --post-text-hover: var(--yellow);
+    --link-color: var(--yellow);
+    --code-color: var(--code-gray);
+    --code-background: var(--dark-black);
+  }
+}
+
+/* ❗️ keep the rules in sync with the automatic dark mode above! */
+:root.dark {
+  --header-background: var(--middle-blue);
+  --body-text: var(--white);
+  --body-background: var(--dark-blue);
+  --post-background: var(--middle-blue);
+  --post-text: var(--white);
+  --post-text-hover: var(--yellow);
+  --link-color: var(--yellow);
+  --code-color: var(--code-gray);
+  --code-background: var(--dark-black);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 
+scroll-top padding
+to account for sticky header
+https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-margin-top
+*/
+html {
+  scroll-padding-top: 4rem;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: auto;
+  text-align: left;
+  background-color: var(--body-background);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  color: var(--body-text);
+}
+
+.header-inner,
+footer,
+.max-width {
+  padding: 1em;
+  max-width: 1280px;
+  margin: auto;
+}
+
+a {
+  color: var(--link-color);
+}
+
+nav a {
+  margin-right: 10px;
+}
+
+textarea {
+  width: 100%;
+  font-size: 16px;
+}
+
+input {
+  font-size: 16px;
+}
+
+content {
+  line-height: 1.6;
+}
+
+table {
+  width: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+code {
+  padding: 2px 5px;
+  background-color: var(--code-background);
+  color: var(--code-color);
+}
+
+pre {
+  padding: 1rem;
+}
+
+pre > code {
+  all: unset;
+}
+
+blockquote {
+  border: 1px solid var(--link-color);
+  color: var(--link-color);
+  padding: 2px 0px 2px 16px;
+  margin: 0px;
+  font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+.card {
+  padding: 1em;
+  border: 1px solid var(--body-text);
+  border-radius: 3px;
+  box-shadow: 0 1px 3px var(--box-shadow);
+  flex-grow: 1;
+}
