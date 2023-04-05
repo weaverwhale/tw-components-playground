@@ -48,9 +48,3 @@ h2 {
 #dark-light-toggle.dark #light {
   display: none;
 }
-
-/* footer */
-footer {
-  padding-top: 0;
-  text-align: center;
-}

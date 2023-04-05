@@ -1,4 +1,4 @@
-import { Container, Space } from "@weaverwhale/tw-components";
+import { Space } from "@weaverwhale/tw-components";
 import MantineHero from "@/components/mantine/MantineHero";
 import MantineCarousel from "@/components/mantine/MantineCarousel";
 import BOMB from "@/components/mantine/BOMB";
