@@ -12,7 +12,7 @@ export default function BOMB() {
 
   return (
     <div>
-      <Container size="lg" align="center">
+      <Container>
         <Flex
           gap="md"
           justify={{ base: "center" }}
@@ -23,7 +23,7 @@ export default function BOMB() {
         >
           <Button
             variant="gradient"
-            gradient={{ from: "red", to: "brown" }}
+            gradient={{ from: "brown", to: "red" }}
             size="xl"
             width="100%"
             {...propExtras}
