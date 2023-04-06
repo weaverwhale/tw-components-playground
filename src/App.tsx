@@ -27,15 +27,15 @@ function App() {
 
   return (
     <TWProvider darkMode={darkMode} setDarkMode={setDarkMode}>
-      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <ErrorBoundary>
+        <Header darkMode={darkMode} setDarkMode={setDarkMode} />
         <Routes>
           <Route path="/404" element={<FourOhFour />} />
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Navigate to="/404" />} />
         </Routes>
+        <Footer />
       </ErrorBoundary>
-      <Footer />
     </TWProvider>
   );
 }
