@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@weaverwhale/tw-components": "^0.2.8",
+    "@weaverwhale/tw-components": "^0.2.30",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0"
