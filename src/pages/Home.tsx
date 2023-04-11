@@ -1,13 +1,17 @@
 import { Space } from "@weaverwhale/tw-components";
 import MantineHero from "@/components/mantine/MantineHero";
 import MantineCarousel from "@/components/mantine/MantineCarousel";
+import MediaCard from "@/components/shopify/shopifyMediaCard";
 
 export default function Home() {
   return (
     <>
       <MantineHero />
       <div className="max-width">
+        <Space h="md" />
         <MantineCarousel />
+        <Space h="md" />
+        <MediaCard />
         <Space h="md" />
       </div>
     </>
