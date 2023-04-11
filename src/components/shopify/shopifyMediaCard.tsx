@@ -1,8 +1,8 @@
-import { MediaCard as ShopifyMediaCard } from "@weaverwhale/tw-components";
+import { MediaCard } from "@weaverwhale/tw-components";
 
-export default function MediaCard() {
+export default function ShopifyMediaCard() {
   return (
-    <ShopifyMediaCard
+    <MediaCard
       title="Getting Started"
       primaryAction={{
         content: "Learn about getting started",
@@ -21,6 +21,6 @@ export default function MediaCard() {
         }}
         src="https://burst.shopifycdn.com/photos/business-woman-smiling-in-office.jpg?width=1850"
       />
-    </ShopifyMediaCard>
+    </MediaCard>
   );
 }
