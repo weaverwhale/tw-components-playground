@@ -1,7 +1,7 @@
 {
   "name": "tw-components-playground",
   "private": true,
-  "version": "0.2.6",
+  "version": "0.3.2",
   "type": "module",
   "scripts": {
     "dev": "vite --force",
@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@weaverwhale/tw-components": "^0.3.2",
+    "@weaverwhale/tw-components": "0.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0"
