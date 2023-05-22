@@ -2,6 +2,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/12d3f306-02aa-4e16-bab3-65f1bc6c08a7/deploy-status)](https://app.netlify.com/sites/tw-components-playground/deploys)
 
+Site demo: https://tw-components-playground.netlify.app
+
 This is a playground for the Triple Whale component library. It is built with [Vite](https://vitejs.dev/), the same build tool used in all Triple Whale applications.
 
 ## Quick Start
